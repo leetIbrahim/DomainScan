@@ -1,0 +1,12 @@
+
+ - name: Request review from team
+   conditions:
+     - -closed
+     - "#approved-reviews-by=0"
+     - "#changes-requested-reviews-by=0"
+     - "review-requested!=@TEAM_NAME_HERE"
+   actions:
+     request_reviews:
+       teams:
+         - TEAM_NAME_HERE
+    
